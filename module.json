@@ -1,0 +1,7 @@
+{
+	"name" : "jsutils/json",
+	"jsutils/json": {
+		"js": ["jsutils.json.js"],
+		"on" : ["webmodules/foo"]
+	}
+}

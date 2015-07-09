@@ -1,0 +1,10 @@
+{
+	"name": "jsutils/json",
+	"type": "library",
+	"description": "Javascript JSON Utility",
+	"keywords": ["module", "polyfills"],
+	"license": "MIT",
+	"require": {
+		"webmodules/foo": ">=0.1.0"
+	}
+}

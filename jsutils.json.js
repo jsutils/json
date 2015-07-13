@@ -8,7 +8,7 @@ _define_("jsutils.json",function(jsonutil){
 	BRACKET_RE_N = /\[([0-9]+)\]/g;
     
     if(dummyJson ===undefined){
-    	console.warr("dummyJson is not installed, to compile json, dummyJson is recommended.")
+    	console.warn("dummyJson is not installed, to compile json, dummyJson is recommended.")
     }
 
 	function normalizeKeypath (key) {

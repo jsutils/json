@@ -1,6 +1,5 @@
 {
-  "name": "jsonutils-json",
-  "version": "0.0.1",
+  "name": "jsutils-json",
   "main": "foo.js",
   "description": "Javascript JSON Utility",
   "authors": [

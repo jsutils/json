@@ -107,14 +107,14 @@ _define_("jsutils.json",function(jsonutil){
 	jsonutil.duplicate = function(obj){
 		var retObj = obj;
 		if(!obj){
-			LOG.warn("Cannot dubplicate",obj);
+			console.warn("Cannot dubplicate",obj);
 			return retObj;
 		}
 		try {
 			var newString = JSON.stringify(obj);
 			retObj = JSON.parse(newString);
 		} catch(err) {
-			LOG.error("NOT SAFE",obj,newString);
+			console.error("NOT SAFE",obj,newString);
 			retObj = jsonutil.makeCopy(obj,10);
 		}
 		return retObj;

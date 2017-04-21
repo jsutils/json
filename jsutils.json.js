@@ -1,15 +1,19 @@
 _define_("jsutils.json",function(jsonutil){
 	
 	//_require_(":webmodules/dummy-json");
-	var dummyJson = _module_('dummyJson');
+	var dummyJson;
 	
     var BRACKET_RE_S = /\['([^']+)'\]/g,
 	BRACKET_RE_D = /\["([^"]+)"\]/g,
 	BRACKET_RE_N = /\[([0-9]+)\]/g;
-    
-    if(dummyJson ===undefined){
-    	console.warn("dummyJson is not installed, to compile json, dummyJson is recommended.")
-    }
+
+    function getDummyJson(){
+        dummyJson = dummyJson || _module_('dummyJson');
+        if(dummyJson ===undefined){
+            console.warn("dummyJson is not installed, to compile json, dummyJson is recommended.")
+        }
+        return dummyJson;
+	}
 
 	function normalizeKeypath (key) {
 	    return key.indexOf('[') < 0
@@ -93,8 +97,8 @@ _define_("jsutils.json",function(jsonutil){
 		}
 		if (typeof _json_string_ === 'string') {
 			var _json_string_2 = _json_string_;
-			if (data !== undefined && dummyJson!==undefined) {
-				_json_string_2 = dummyJson.parse(_json_string_, {
+			if (data !== undefined && getDummyJson()!==undefined) {
+				_json_string_2 = getDummyJson().parse(_json_string_, {
 					data : { data : data }
 				})
 			}
